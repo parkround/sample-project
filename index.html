@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h2>Todo List</h2>
+      <!-- 見出し -->
+      <form @submit.prevent>
+        <input type="text" v-model="newItem" /><!-- テキスト入力欄 -->
+        <button class="btn btn-add" @click="addItem">
+          <!-- 追加ボタン -->
+          追加
+        </button>
+        <button class="btn btn-delete" @click="deleteAll">
+          <!-- 追加ボタン -->
+          全て削除
+        </button>
+      </form>
+      <!-- ここから追記スタート -->
+      <ul>
+        <li v-for="(todo, index) in todos">
+          <input type="checkbox" v-model="todo.isDone" />
+          <span :class="{ done: todo.isDone }">{{ todo.item }}</span>
+          <button @click="deleteItem(index)">Delete</button>
+        </li>
+      </ul>
+      <!-- ここまで -->
+      <pre>{{ $data }}</pre>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
