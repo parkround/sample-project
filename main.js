@@ -22,7 +22,7 @@ var app = new Vue({
   methods: {
     addItem: function() {
       // alert();
-      if (this.newItem == "") return; //←追記した部分
+      if (this.newItem == "") return; 
       var todo = {
         item: this.newItem
       };
