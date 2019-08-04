@@ -13,7 +13,11 @@
       <h2>Todo List</h2>
       <!-- 見出し -->
       <form @submit.prevent>
-        <input type="text" v-model="newItem" /><!-- テキスト入力欄 -->
+        <input
+          class="input"
+          type="text"
+          v-model="newItem"
+        /><!-- テキスト入力欄 -->
         <button class="btn btn-add" @click="addItem">
           <!-- 追加ボタン -->
           追加
@@ -26,9 +30,8 @@
       <!-- ここから追記スタート -->
       <ul>
         <li v-for="(todo, index) in todos">
-          <input type="checkbox" v-model="todo.isDone" />
-          <span :class="{ done: todo.isDone }">{{ todo.item }}</span>
-          <button @click="deleteItem(index)">Delete</button>
+          <span>{{ index + 1 }}: {{ todo.item }}</span>
+          <button class="btn btn-delete"　@click="deleteItem(index)">削除</button>
         </li>
       </ul>
       <!-- ここまで -->

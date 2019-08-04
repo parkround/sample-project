@@ -1,0 +1,64 @@
+h1 {
+
+}
+
+.bookmark {
+    background-color:#2384c5;
+    border:solid white;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    color:white;
+}
+
+.top {
+
+    color:white;
+ display:flex;
+ justify-content: space-between;
+ background-color:#2384c5;
+ padding: 1rem;
+}
+
+.search {
+    padding:0.5rem;
+}
+
+.form{
+    width: 15rem ;
+    border-radius: 0.5rem;
+}
+
+.button {
+  background-color: #6ab2e2;
+  color:white;
+  border-radius: 0.5rem;
+}
+
+.group{
+    display: inline-block;
+    padding: 1rem;
+    border: solid lightgrey 1px
+}
+
+.book {
+display:flex;
+flex-direction: column;
+  /* justify-content: space-between; */
+  
+}
+
+.mark {
+    width: 8rem;
+    background-color:#2384c5;
+    border:solid white;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    color:white;
+}
+
+
+.image {
+    width: 20%;
+    float: left;
+    padding: 0.5rem;
+}

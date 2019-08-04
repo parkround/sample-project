@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Vue.js</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div id="Vue">
+      <div class="top">
+        <h1>書籍検索アプリ</h1>
+        <button class="bookmark">Bookmark</button>
+      </div>
+      <div class="search">
+        <input class="form" type="text" placeholder="Search for something..." />
+        <button class="button">Search</button>
+      </div>
+      <div class="group" v-for="item in list">
+        <img class="image" v-bind:src="item.image"/>
+        <div class="book">
+            <h5>
+              {{ item.title }}
+            </h5>
+            <p>著者: {{ item.author }}</p>
+            <p>価格: {{ item.price }}円</p>
+            <p>発売日: {{ item.release_date }}</p>
+            <button class="mark">ブックマーク</button>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
